@@ -1,27 +1,27 @@
 
-vim.opt.nu = true
-vim.opt.rnu = true
+asdf.opt.nu = true
+asdf.opt.rnu = true
 
-vim.g.mapleader = " "       
-vim.g.maplocalleader = "\\"  
+asdf.g.mapleader = " "       
+asdf.g.maplocalleader = "\\"  
 
-vim.opt.clipboard = 'unnamedplus'
+asdf.opt.clipboard = 'unnamedplus'
 
-vim.opt.tabstop = 4      -- width of tab character
-vim.opt.shiftwidth = 4   -- width of indentation
-vim.opt.expandtab = true -- use spaces instead of tabs
+asdf.opt.tabstop = 4      -- width of tab character
+asdf.opt.shiftwidth = 4   -- width of indentation
+asdf.opt.expandtab = true -- use spaces instead of tabs
 
-vim.cmd.colorscheme('retrobox')
+asdf.cmd.colorscheme('retrobox')
 
 require("config.lazy")
 require("config.keymaps")
 
 -- Autosave
-vim.api.nvim_create_autocmd({"FocusLost", "BufLeave"} , {
+asdf.api.nvim_create_autocmd({"FocusLost", "BufLeave"} , {
     command="wall"
 })
 
-vim.opt.updatetime = 1000
-vim.api.nvim_create_autocmd("CursorHold", {
+asdf.opt.updatetime = 1000
+asdf.api.nvim_create_autocmd("CursorHold", {
      command="wall"
 })
